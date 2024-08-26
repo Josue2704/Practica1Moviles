@@ -1,7 +1,4 @@
 
-Memoria actualizada
-Aquí tienes la documentación redactada en tercera persona:
-
 Cómo Se Desarrolló la App de Noticias en Android
 1. Iniciando con Android Studio
 El proceso comenzó en Android Studio, donde se creó un nuevo proyecto utilizando la opción "Empty Activity" para empezar desde cero. Se le asignó un nombre al proyecto, se seleccionó Kotlin como lenguaje, y se configuró el SDK mínimo en 24 para garantizar la compatibilidad con la mayoría de los dispositivos.

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartService">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Imagen superior expandida -->
+            <ImageView
+                android:id="@+id/iv_header"
+                android:layout_width="394dp"
+                android:layout_height="250dp"
+                android:contentDescription="Header image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/group8" />
+
+            <!-- Título del servicio -->
+            <TextView
+                android:id="@+id/tv_service_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Armado de muebles"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black" />
+
+            <!-- Descripción corta del servicio -->
+            <TextView
+                android:id="@+id/tv_service_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium..."
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/gray" />
+
+            <!-- Campo para el título de la propuesta -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Título de la propuesta"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <EditText
+                android:id="@+id/et_proposal_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Agregar propuesta..."
+                android:backgroundTint="@color/gray_light"
+                android:padding="12dp"
+                android:background="@drawable/rounded_border" />
+
+            <!-- Campo para la descripción de la propuesta -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción de la propuesta"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <EditText
+                android:id="@+id/et_proposal_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Agregar descripción..."
+                android:minHeight="120dp"
+                android:backgroundTint="@color/gray_light"
+                android:padding="12dp"
+                android:background="@drawable/rounded_border"
+                android:gravity="top" />
+
+            <!-- Sección para agregar fotos -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar fotos de la zona de trabajo"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Imagen 1 -->
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/image7"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/rounded_border" />
+
+                <!-- Imagen 2 -->
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/image8"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/rounded_border" />
+
+                <!-- Botón para agregar más imágenes -->
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/baseline_add_24"
+                    android:scaleType="center"
+                    android:background="@drawable/rounded_border" />
+            </LinearLayout>
+
+            <!-- Campo de selección de materiales -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Posee materiales propios?"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/rb_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sí" />
+
+                <RadioButton
+                    android:id="@+id/rb_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:layout_marginStart="32dp" />
+            </RadioGroup>
+
+            <!-- Selección de tipo de pago -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo de pago"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tarjeta"
+                    android:layout_marginEnd="16dp" />
+
+                <CheckBox
+                    android:id="@+id/cb_cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Efectivo" />
+            </LinearLayout>
+
+            <!-- Botón de enviar -->
+            <Button
+                android:id="@+id/btn_send_request"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enviar Solicitud"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/rounded_button_background"
+                android:textColor="@color/white"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Botón de retroceso flotante -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back button"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botón de ajustes flotante -->
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/baseline_adjust_24"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Settings button"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home" />
+    <item
+        android:id="@+id/stores"
+        android:icon="@drawable/baseline_local_grocery_store_24"
+        android:title="Tiendas" />
+    <item
+        android:id="@+id/cart"
+        android:icon="@drawable/garden_care_image"
+        android:title="Carrito" />
+    <item
+        android:id="@+id/history"
+        android:icon="@drawable/baseline_history_24"
+        android:title="Historial" />
+</menu>
